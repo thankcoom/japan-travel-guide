@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="日本關西中部7天6夜秋季旅遊完整指南 - 名古屋、神戶、大阪深度遊">
+    <meta name="keywords" content="日本旅遊,名古屋,神戶,大阪,關西旅遊,秋季賞楓">
+    <title>🍂 日本關西中部7天6夜秋季旅遊手札 🍁</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Noto+Serif+TC:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4A90A4;
+            --secondary-color: #83C5BE;
+            --accent-color: #E76F51;
+            --text-dark: #2C3E50;
+            --text-light: #7F8C8D;
+            --bg-cream: #FFF8F0;
+            --bg-light: #FFFBF5;
+            --border-color: #E8DCC6;
+            --shadow: rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 100%;
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '🍂';
+            position: absolute;
+            font-size: 200px;
+            opacity: 0.1;
+            top: -50px;
+            right: -50px;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .hero h1 {
+            font-family: 'Noto Serif TC', serif;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero .subtitle {
+            font-size: 1.2em;
+            opacity: 0.95;
+            margin-bottom: 10px;
+        }
+
+        .hero .date {
+            font-size: 1.1em;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .content {
+            padding: 50px 40px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .feature-card {
+            background: var(--bg-light);
+            padding: 30px;
+            border-radius: 16px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 2px solid var(--border-color);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px var(--shadow);
+        }
+
+        .feature-card .icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .feature-card h3 {
+            color: var(--text-dark);
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+
+        .feature-card p {
+            color: var(--text-light);
+            line-height: 1.6;
+            font-size: 0.95em;
+        }
+
+        .info-section {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 30px;
+            border-radius: 16px;
+            margin-bottom: 30px;
+        }
+
+        .info-section h2 {
+            color: var(--text-dark);
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .info-item {
+            background: white;
+            padding: 15px 20px;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .info-item .label {
+            font-size: 0.85em;
+            color: var(--text-light);
+            margin-bottom: 5px;
+        }
+
+        .info-item .value {
+            font-size: 1.1em;
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--accent-color) 0%, #f4a261 100%);
+            color: white;
+            padding: 18px 50px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(231, 111, 81, 0.3);
+            border: none;
+            cursor: pointer;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(231, 111, 81, 0.4);
+        }
+
+        .cta-button:active {
+            transform: translateY(-1px);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px;
+            background: var(--bg-cream);
+            color: var(--text-light);
+            font-size: 0.9em;
+        }
+
+        .highlights {
+            margin: 30px 0;
+        }
+
+        .highlight-tag {
+            display: inline-block;
+            background: white;
+            color: var(--primary-color);
+            padding: 8px 16px;
+            border-radius: 20px;
+            margin: 5px;
+            font-size: 0.9em;
+            font-weight: 500;
+            border: 2px solid var(--primary-color);
+        }
+
+        /* 響應式設計 */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 40px 25px;
+            }
+
+            .hero h1 {
+                font-size: 1.8em;
+            }
+
+            .hero .subtitle {
+                font-size: 1em;
+            }
+
+            .content {
+                padding: 30px 25px;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-button {
+                width: 100%;
+                padding: 16px 30px;
+                font-size: 1.1em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+
+            .container {
+                border-radius: 16px;
+            }
+
+            .hero h1 {
+                font-size: 1.5em;
+            }
+
+            .feature-card {
+                padding: 20px;
+            }
+
+            .info-section {
+                padding: 20px;
+            }
+        }
+
+        /* 載入動畫 */
+        .fade-in {
+            animation: fadeIn 1s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container fade-in">
+        <div class="hero">
+            <h1>🍂 日本關西中部秋季之旅 🍁</h1>
+            <p class="subtitle">7天6夜完整旅遊指南</p>
+            <p class="date">2025年10月10日 - 10月16日</p>
+        </div>
+
+        <div class="content">
+            <div class="features">
+                <div class="feature-card">
+                    <span class="icon">🗺️</span>
+                    <h3>完整行程規劃</h3>
+                    <p>名古屋 → 神戶 → 大阪<br>每日詳細時程安排</p>
+                </div>
+                <div class="feature-card">
+                    <span class="icon">🚊</span>
+                    <h3>交通路線詳解</h3>
+                    <p>所有交通方式、路線<br>時間與費用完整標註</p>
+                </div>
+                <div class="feature-card">
+                    <span class="icon">🏨</span>
+                    <h3>住宿資訊</h3>
+                    <p>3間精選飯店<br>地址電話全都有</p>
+                </div>
+                <div class="feature-card">
+                    <span class="icon">🍜</span>
+                    <h3>美食攻略</h3>
+                    <p>神戶牛、名古屋美食<br>大阪道頓堀推薦</p>
+                </div>
+                <div class="feature-card">
+                    <span class="icon">🎯</span>
+                    <h3>景點全開放</h3>
+                    <p>所有營業時間已確認<br>無休館日衝突</p>
+                </div>
+                <div class="feature-card">
+                    <span class="icon">💰</span>
+                    <h3>預算規劃</h3>
+                    <p>詳細費用估算<br>省錢攻略分享</p>
+                </div>
+            </div>
+
+            <div class="info-section">
+                <h2>📋 行程概要</h2>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <div class="label">出發日期</div>
+                        <div class="value">10/10（五）</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="label">返回日期</div>
+                        <div class="value">10/16（四）</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="label">旅遊天數</div>
+                        <div class="value">7天6夜</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="label">預算範圍</div>
+                        <div class="value">NT$50,000-95,000</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="highlights">
+                <h2 style="color: var(--text-dark); margin-bottom: 20px; text-align: center;">✨ 精選亮點</h2>
+                <div style="text-align: center;">
+                    <span class="highlight-tag">🏯 名古屋城</span>
+                    <span class="highlight-tag">🍞 麵包超人博物館</span>
+                    <span class="highlight-tag">🥩 神戶牛美食</span>
+                    <span class="highlight-tag">☕ 安藤忠雄星巴克</span>
+                    <span class="highlight-tag">🦁 神戶動物王國</span>
+                    <span class="highlight-tag">🍮 風見雞布丁</span>
+                    <span class="highlight-tag">🦀 道頓堀美食</span>
+                    <span class="highlight-tag">🛍️ 心齋橋購物</span>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="complete.html" class="cta-button">📖 查看完整行程</a>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>🍂 祝您有個美好的日本秋季之旅 🍁</p>
+            <p style="margin-top: 10px; font-size: 0.85em;">© 2025 Japan Travel Guide</p>
+        </div>
+    </div>
+
+    <script>
+        // 簡單的進入動畫
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.feature-card');
+            cards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.style.opacity = '0';
+                    card.style.transform = 'translateY(20px)';
+                    setTimeout(() => {
+                        card.style.transition = 'all 0.5s ease';
+                        card.style.opacity = '1';
+                        card.style.transform = 'translateY(0)';
+                    }, 50);
+                }, index * 100);
+            });
+        });
+    </script>
+</body>
+</html>
